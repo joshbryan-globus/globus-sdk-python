@@ -1,6 +1,6 @@
 import logging
-from typing import Any, Dict, Optional, Sequence, Union
 import urllib.parse
+from typing import Any, Dict, Optional, Sequence, Union
 
 from globus_sdk import utils
 from globus_sdk.auth.client_types.base import AuthClient

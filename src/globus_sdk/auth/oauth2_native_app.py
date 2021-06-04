@@ -3,8 +3,8 @@ import hashlib
 import logging
 import os
 import re
-from typing import Any, Dict, Optional, Sequence, Tuple, Union
 import urllib.parse
+from typing import Any, Dict, Optional, Sequence, Tuple, Union
 
 from globus_sdk import utils
 from globus_sdk.auth.client_types.base import AuthClient
@@ -155,7 +155,9 @@ class GlobusNativeAppFlowManager(GlobusOAuthFlowManager):
         if prefill_named_grant is not None:
             logger.debug(f"prefill_named_grant={self.prefill_named_grant}")
 
-    def get_authorize_url(self, additional_params: Optional[Dict[str, Any]] = None) -> str:
+    def get_authorize_url(
+        self, additional_params: Optional[Dict[str, Any]] = None
+    ) -> str:
         """
         Start a Native App flow by getting the authorization URL to which users
         should be sent.
